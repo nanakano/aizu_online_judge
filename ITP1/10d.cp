@@ -3,7 +3,9 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include <vector>
 #define ll long long
+#define ull unsigned long long
 #define YES cout << "YES" << endl
 #define NO cout << "NO" << endl
 #define yes cout << "Yes" << endl
