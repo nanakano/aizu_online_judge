@@ -18,7 +18,17 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a;
+  int a,b;
+  cin >> a >> b;
+
+  int d,r;
+  double f;
+
+  d = a/b;
+  r=a%b;
+  f = (double)a/(double)b;
+
+  cout << d << " " << r << " " << fixed << setprecision(8) << f << endl;
 
   return 0;
 }
