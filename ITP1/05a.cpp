@@ -21,9 +21,18 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a;
-
-  cout << a << endl;
+  int h,w;
+  while(true){
+    cin >> h >> w;
+    if(h == 0 && w == 0) break;
+    RIP(i,h){
+      RIP(j,w){
+        cout << "#";
+      }
+      cout << endl;
+    }
+    cout << endl;
+  }
 
   return 0;
 }
