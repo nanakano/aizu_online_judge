@@ -21,7 +21,55 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n; cin >> n;
+  int b,f,r,v;
 
+  int f1[3][10] = {0};
+  int f2[3][10] = {0};
+  int f3[3][10] = {0};
+  int f4[3][10] = {0};
+
+  RIP(i,n){
+    cin >> b >> f >> r >> v;
+    if(b == 1)
+      f1[f-1][r-1] += v;
+    if(b == 2)
+      f2[f-1][r-1] += v;
+    if(b == 3)
+      f3[f-1][r-1] += v;
+    if(b == 4)
+      f4[f-1][r-1] += v;
+  }
+
+  RIP(i,3){
+    RIP(j,10){
+      cout << " " << f1[i][j];
+    }
+    cout << endl;
+  }
+  cout << "####################" << endl;
+  RIP(i,3){
+    RIP(j,10){
+      cout << " " << f2[i][j];
+    }
+    cout << endl;
+  }
+  cout << "####################" << endl;
+  RIP(i,3){
+    RIP(j,10){
+      cout << " " << f3[i][j];
+    }
+    cout << endl;
+  }
+  cout << "####################" << endl;
+  RIP(i,3){
+    RIP(j,10){
+      cout << " " << f4[i][j];
+    }
+    cout << endl;
+  }
+
+
+  
   return 0;
 }

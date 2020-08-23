@@ -21,7 +21,16 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int a,n; cin >> n;
+  vector<int> v;
+  RIP(i,n) {cin >> a; v.push_back(a);}
+
+  FORD(i,v.size()-1,0) {
+    if(i != 0) cout << v[i] << " ";
+    else cout << v[i];
+  }
+
+  cout << endl;
 
   return 0;
 }
