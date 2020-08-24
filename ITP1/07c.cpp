@@ -21,7 +21,26 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int r,c; cin >> r >> c;
+  int ans=0;
+  int a,b[101] = {0};
+
+  RIP(i,r){
+    RIP(j,c){
+      cin >> a;
+      ans += a;  
+      cout << a << " ";
+      b[j] += a;
+    }
+    cout << ans << endl;
+    ans = 0;
+  }
+
+  RIP(i,c) {
+    ans += b[i];
+    cout << b[i] << " ";
+  }
+  cout << ans << endl;
 
   return 0;
 }

@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cctype>
 #include <cmath>
 #include <iomanip>
 #include <iostream>
@@ -21,7 +22,16 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string s; getline(cin, s);
+
+  RIP(i, s.size()){
+    if(isupper(s[i]))
+      s[i] += 0x20;
+    else if(islower(s[i]))
+      s[i] -= 0x20;
+  }
+
+  cout << s << endl;
 
   return 0;
 }
