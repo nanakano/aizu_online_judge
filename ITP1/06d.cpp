@@ -21,7 +21,20 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n,m; cin >> n >> m;
+  int a[n][m], b[m], c[n];
+  RIP(i,n) RIP(j,m) cin >> a[i][j];
+  RIP(i,m) {cin >> b[i];}
+
+  RIP(i,n) c[i] = 0;
+
+  RIP(i,n){
+    RIP(j,m){
+      c[i] += a[i][j] * b[j];
+    }
+  }
+
+  RIP(j,n) cout << c[j] << endl;
 
   return 0;
 }
