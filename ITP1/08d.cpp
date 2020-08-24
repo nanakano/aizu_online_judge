@@ -21,7 +21,12 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string s,p; cin >> s >> p;
+  string ss;
+  ss = s + s;
+
+  if(ss.find(p) != string::npos) yes;
+  else no;
 
   return 0;
 }
