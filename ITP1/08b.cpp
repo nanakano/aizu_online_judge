@@ -21,7 +21,19 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string x; 
+  
+  int sum=0;
+  while(true){
+    cin >> x;
+    if(x == "0") break;
+    RIP(i,x.size()){
+      sum += x[i] - '0';
+    }
+    cout << sum << endl;
+    sum = 0;
+  }
+
 
   return 0;
 }
