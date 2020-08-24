@@ -21,7 +21,24 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string s;
+  int m;
+  int h;
+  string buf;
+  int c=0;
+  
+  while(true){
+    cin >> s;
+    if(s == "-") break;
+    cin  >> m;
+    RIP(i,m) {
+      cin >> h;
+      RIP(j,h)
+        s.push_back(s[j]);
+      s.erase(s.begin(), s.begin()+h);
+    }
+    cout << s << endl;
+  }
 
   return 0;
 }

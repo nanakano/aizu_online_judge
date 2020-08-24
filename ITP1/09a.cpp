@@ -21,7 +21,16 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string w,t; cin >> w;
+
+  int ans=0;
+  while(cin >> t){
+    if(t == "END_OF_TEXT") break;
+    transform(t.begin(), t.end(), t.begin(), ::tolower);
+    if(w == t) ans++;
+  }
+
+  cout << ans << endl;
 
   return 0;
 }
