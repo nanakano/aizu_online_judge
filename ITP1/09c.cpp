@@ -21,7 +21,18 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  int n; cin >> n;
+  string t,h;
+
+  int ans1=0, ans2=0;
+  RIP(i,n){
+    cin >> t >> h;
+    if(t > h) {ans1+=3;}
+    else if(t < h) {ans2+=3;}
+    if(t == h) {ans1++; ans2++;}
+  }
+
+  cout << ans1 << " " << ans2 << endl;
 
   return 0;
 }
