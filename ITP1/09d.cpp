@@ -21,7 +21,21 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  string str,str1,com;
+  int a,b,q;
+  cin >> str >> q;
+  while(q--){
+    cin  >> com >> a >> b;
+    if(com == "print"){
+      cout << str.substr(a,b-a+1) <<endl;
+    }else if(com == "reverse"){
+      for(int i=a, j=b; i<j; i++, j--)
+        swap(str[i],str[j]);
+    }else{
+      cin >> str1;
+      str.replace(a,b-a+1,str1);
+    }
+  }
 
   return 0;
 }
