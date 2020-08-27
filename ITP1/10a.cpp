@@ -21,7 +21,19 @@ int main(){
   cin.tie(0);
   ios::sync_with_stdio(false);
   
-  int a; cin >> a;
+  double x1,y1,x2,y2; 
+  //cin >> x1 >> y1 >> x2 >> y2;
+  scanf("%lf %lf %lf %lf",&x1,&y1,&x2,&y2);
+
+
+  double d;
+  //d = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+
+  //cout << d << endl;
+  //cout << PRECISION(1,d) << endl;
+  //cout << (double)hypot(x1-x2,y1-y2) << endl;
+  printf("%lf",(double)hypot(x1-x2,y1-y2));
+  //printf("%lf",d);
 
   return 0;
 }
